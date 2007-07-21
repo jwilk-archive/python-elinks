@@ -1,3 +1,9 @@
+python-elinks (0.1.1) unstable; urgency=low
+
+  * Include the example.
+
+ -- Jakub Wilk <ubanus@users.sf.net>  Sat, 21 Jul 2007 20:01:50 +0200
+
 python-elinks (0.1) unstable; urgency=low
 
   * Initial release.
