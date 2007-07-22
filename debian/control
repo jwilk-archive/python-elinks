@@ -8,6 +8,6 @@ Bugs: mailto:ubanus@users.sf.net
 
 Package: python-elinks
 Architecture: all
-Depends: ${misc:Depends}
+Depends: ${python:Depends}
 Description: ELinks-like encoding error handler for Python
 
