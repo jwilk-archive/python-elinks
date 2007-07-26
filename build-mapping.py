@@ -3,6 +3,10 @@ from urllib2 import urlopen
 from warnings import warn
 import re
 
+class InternalError(Exception):
+	def __init__(self):
+		Exception.__init__(self, 'Internal error')
+
 _re = re.compile(
 	r'''
 	^	U[+] (?P<code> [0-9a-f]{4} ) : (?P<replace> .* ) $ |
@@ -32,10 +36,7 @@ _re_oct_escape = re.compile(r'\\([0-7]{3})')
 mapping = {}
 
 def update(code, replace):
-	try:
-		mapping[unichr(code)] = unicode(replace)
-	except Exception:
-		print >>stderr, hex(code), repr(replace)
+	mapping[unichr(code)] = unicode(replace)
 
 for line in urlopen('http://repo.or.cz/w/elinks.git?a=blob_plain;f=Unicode/7bitrepl.lnx;hb=elinks-0.12'):
 	line = line.strip()
@@ -57,7 +58,7 @@ for line in urlopen('http://repo.or.cz/w/elinks.git?a=blob_plain;f=Unicode/7bitr
 			replace = chr(int(hexreplace, 16))
 			codes = _re_codes.findall(codes)
 			if not codes:
-				raise Exception('Internal error')
+				raise InternalError()
 			for code in codes:
 				if code[2]:
 					code = int(code[2], 16)
@@ -72,7 +73,7 @@ for line in urlopen('http://repo.or.cz/w/elinks.git?a=blob_plain;f=Unicode/7bitr
 			for code in xrange(0xff01, 0xff5f):
 				update(code, chr(code - 0xff00 + 0x20))
 		else:
-			raise Exception('Internal error')
+			raise InternalError()
 
 print 'MAPPING = ', mapping
 
