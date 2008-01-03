@@ -21,7 +21,7 @@ setup(
 	description = 'ELinks-like encoding error handler',
 	long_description = __doc__.strip(),
 	classifiers = classifiers,
-	url = 'http://code.google.com/p/python-elinks/',
+	url = 'http://python-elinks.googlecode.com/',
 	author = 'Jakub Wilk',
 	author_email = 'ubanus@users.sf.net',
 	packages = ['elinks']
