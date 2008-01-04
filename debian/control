@@ -2,11 +2,12 @@ Source: python-elinks
 Section: python
 Priority: extra
 Maintainer: Jakub Wilk <ubanus@users.sf.net>
-Build-Depends: cdbs, debhelper (>= 5), python-setuptools, python-support
-Standards-Version: 3.7.2
+Build-Depends: cdbs, debhelper (>= 5), python-all-dev, python-setuptools (>= 0.6b3-1), python-support
+Standards-Version: 3.7.3
 Bugs: mailto:ubanus@users.sf.net
-XS-Vcs-Svn: http://python-elinks.googlecode.com/svn/trunk
-XS-Vcs-Browser: http://python-elinks.googlecode.com/svn/trunk
+Vcs-Svn: http://python-elinks.googlecode.com/svn/trunk
+Vcs-Browser: http://python-elinks.googlecode.com/svn/trunk
+Homepage: http://python-elinks.googlecode.com/svn/trunk
 
 Package: python-elinks
 Architecture: all

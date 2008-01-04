@@ -11,7 +11,10 @@ Programming Language :: Python
 Topic :: Software Development :: Libraries :: Python Modules
 Topic :: Text Processing :: Filters'''.split('\n')
 
-from distutils.core import setup
+try:
+	from setuptools import setup
+except ImportError:
+	from distutils.core import setup
 
 setup(
 	name = 'python-elinks',
