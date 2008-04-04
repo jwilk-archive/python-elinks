@@ -6,7 +6,7 @@ Build-Depends: cdbs, debhelper (>= 5), python-all-dev, python-setuptools (>= 0.6
 Standards-Version: 3.7.3
 Bugs: mailto:ubanus@users.sf.net
 Vcs-Svn: http://python-elinks.googlecode.com/svn/trunk
-Vcs-Browser: http://python-elinks.googlecode.com/svn/trunk
+Vcs-Browser: http://code.google.com/p/python-elinks/source/browse
 Homepage: http://python-elinks.googlecode.com/svn/trunk
 
 Package: python-elinks
