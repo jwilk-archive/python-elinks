@@ -1,7 +1,7 @@
 This is python-elinks, written and maintained by Jakub Wilk
 <ubanus@users.sf.net>.
 
-Copyright (c) 2007, 2008 Jakub Wilk <ubanus@users.sf.net>
+Copyright © 2007, 2008 Jakub Wilk <ubanus@users.sf.net>
 
 License:
 
@@ -15,5 +15,5 @@ License:
   General Public License for more details.
 
 On Debian systems, the complete text of the GNU General Public License
-can be found in `/usr/share/common-licenses/GPL-2'.
+can be found in `/usr/share/common-licenses/GPL-2`.
 
