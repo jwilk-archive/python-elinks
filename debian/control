@@ -3,7 +3,7 @@ Section: python
 Priority: extra
 Maintainer: Jakub Wilk <ubanus@users.sf.net>
 Build-Depends: debhelper (>= 7), python-all-dev, python-setuptools (>= 0.6b3), python-support
-Standards-Version: 3.8.0
+Standards-Version: 3.8.1
 Bugs: mailto:ubanus@users.sf.net
 Vcs-Svn: http://python-elinks.googlecode.com/svn/trunk
 Vcs-Browser: http://code.google.com/p/python-elinks/source/browse
@@ -11,7 +11,7 @@ Homepage: http://python-elinks.googlecode.com/svn/trunk
 
 Package: python-elinks
 Architecture: all
-Depends: ${python:Depends}
+Depends: ${misc:Depends}, ${python:Depends}
 Description: ELinks-like encoding error handler for Python
  python-elinks installs an encoding error handler that uses the same
  ASCII replacements as ELinks does.
