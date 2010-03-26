@@ -1,6 +1,6 @@
 '''Register the elinks-like encoding error handler.'''
 
-__author__ = 'Jakub Wilk <ubanus@users.sf.net>'
+__author__ = 'Jakub Wilk <jwilk@jwilk.net>'
 __version__ = '0.1'
 
 from elinks.mapping import MAPPING
