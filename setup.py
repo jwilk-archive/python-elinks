@@ -14,17 +14,17 @@ Topic :: Text Processing :: Filters'''.split('\n')
 from distutils.core import setup
 
 setup(
-	name = 'python-elinks',
-	version = '0.1.2',
-	license = 'MIT',
-	platforms = ['any'],
-	description = 'ELinks-like encoding error handler',
-	long_description = __doc__.strip(),
-	classifiers = classifiers,
-	url = 'http://python-elinks.googlecode.com/',
-	author = 'Jakub Wilk',
-	author_email = 'jwilk@jwilk.net',
-	packages = ['elinks']
+    name = 'python-elinks',
+    version = '0.1.2',
+    license = 'MIT',
+    platforms = ['any'],
+    description = 'ELinks-like encoding error handler',
+    long_description = __doc__.strip(),
+    classifiers = classifiers,
+    url = 'http://python-elinks.googlecode.com/',
+    author = 'Jakub Wilk',
+    author_email = 'jwilk@jwilk.net',
+    packages = ['elinks']
 )
 
-# vim:ts=4 sw=4 noet
+# vim:ts=4 sw=4 et
