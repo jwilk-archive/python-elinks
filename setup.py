@@ -5,7 +5,7 @@ python-elinks installs an encoding error handler that uses the same ASCII replac
 classifiers = '''\
 Development Status :: 4 - Beta
 Intended Audience :: Developers
-License :: OSI Approved :: MIT License
+License :: OSI Approved :: GNU General Public License (GPL)
 Operating System :: OS Independent
 Programming Language :: Python
 Topic :: Software Development :: Libraries :: Python Modules
@@ -16,7 +16,7 @@ from distutils.core import setup
 setup(
     name = 'python-elinks',
     version = '0.2',
-    license = 'MIT',
+    license = 'GNU GPL 2',
     platforms = ['any'],
     description = 'ELinks-like encoding error handler',
     long_description = __doc__.strip(),

@@ -1,3 +1,25 @@
+# encoding=UTF-8
+
+# Copyright © 2007, 2010 Jakub Wilk <jwilk@jwilk.net>
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the “Software”), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in
+# all copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
 from sys import stderr
 from urllib2 import urlopen
 from warnings import warn
@@ -39,6 +61,13 @@ mapping = {}
 def update(code, replace):
     mapping[unichr(code)] = unicode(replace)
 
+print '''# encoding=UTF-8
+
+# This file was automatically generated from the Unicode/7bitrepl.lnx file of
+# ELinks 0.12 distribution. ELinks is free free software; you can redistribute
+# it and/or modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; version 2 dated June, 1991.
+'''
 for line in urlopen('http://repo.or.cz/w/elinks.git?a=blob_plain;f=Unicode/7bitrepl.lnx;hb=elinks-0.12'):
     line = line.strip()
     if not line:

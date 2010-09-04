@@ -1,3 +1,10 @@
+# encoding=UTF-8
+
+# This file was automatically generated from the Unicode/7bitrepl.lnx file of
+# ELinks 0.12 distribution. ELinks is free free software; you can redistribute
+# it and/or modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation; version 2 dated June, 1991.
+
 MAPPING = \
 {u'\x00': u'NUL',
  u'\x01': u'SH',
