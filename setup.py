@@ -11,9 +11,12 @@ Programming Language :: Python
 Topic :: Software Development :: Libraries :: Python Modules
 Topic :: Text Processing :: Filters'''.split('\n')
 
-from distutils.core import setup
+import os
+import distutils.core
 
-setup(
+os.putenv('TAR_OPTIONS', '--owner root --group root --mode a+rX')
+
+distutils.core.setup(
     name = 'python-elinks',
     version = '0.2',
     license = 'GNU GPL 2',
