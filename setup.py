@@ -2,14 +2,15 @@
 python-elinks installs an encoding error handler that uses the same ASCII replacements as ELinks does.
 '''
 
-classifiers = '''\
+classifiers = '''
 Development Status :: 4 - Beta
 Intended Audience :: Developers
 License :: OSI Approved :: GNU General Public License (GPL)
 Operating System :: OS Independent
 Programming Language :: Python
 Topic :: Software Development :: Libraries :: Python Modules
-Topic :: Text Processing :: Filters'''.split('\n')
+Topic :: Text Processing :: Filters
+'''.strip().split('\n')
 
 import os
 import distutils.core
