@@ -9,7 +9,7 @@
 '''Register the elinks-like encoding error handler.'''
 
 __author__ = 'Jakub Wilk <jwilk@jwilk.net>'
-__version__ = '0.2'
+__version__ = '0.3'
 
 from elinks.mapping import MAPPING
 from codecs import register_error as _register_error
