@@ -1,2 +1,2 @@
 include build-mapping.py
-include test.py
+include test/*.py
