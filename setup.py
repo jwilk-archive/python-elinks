@@ -38,8 +38,6 @@ def get_version():
     except LookupError:
         raise IOError('Unexpected end-of-file')
 
-os.putenv('TAR_OPTIONS', '--owner root --group root --mode a+rX')
-
 distutils.core.setup(
     name = 'python-elinks',
     version = get_version(),
