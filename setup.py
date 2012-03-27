@@ -12,7 +12,7 @@ Programming Language :: Python :: 2
 Programming Language :: Python :: 3
 Topic :: Software Development :: Libraries :: Python Modules
 Topic :: Text Processing :: Filters
-'''.strip().split('\n')
+'''.strip().splitlines()
 
 import os
 import distutils.core
