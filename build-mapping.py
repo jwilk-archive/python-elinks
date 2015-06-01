@@ -34,7 +34,7 @@ _re = re.compile(
     r'''
     ^   U[+] (?P<code> [0-9a-f]{4} ) : (?P<replace> .* ) $ |
     ^   (?P<hexreplace> 0x[0-9a-f]{2} )
-        (?P<codes> 
+        (?P<codes>
             (?:
                 (?: \s+ U[+] (?: [0-9a-f]{4} ) ) |
                 (?: \s+ U[+] (?: [0-9a-f]{4} ) - U[+] (?: [0-9a-f]{4} ) )
