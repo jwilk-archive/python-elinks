@@ -39,18 +39,18 @@ def get_version():
         raise IOError('Unexpected end-of-file')
 
 distutils.core.setup(
-    name = 'python-elinks',
-    version = get_version(),
-    license = 'GNU GPL 2',
-    platforms = ['any'],
-    description = 'ELinks-like encoding error handler',
-    long_description = __doc__.strip(),
-    classifiers = classifiers,
-    url = 'http://jwilk.net/software/python-elinks',
-    author = 'Jakub Wilk',
-    author_email = 'jwilk@jwilk.net',
-    packages = ['elinks'],
-    cmdclass = dict(build_py=distutils_build_py),
+    name='python-elinks',
+    version=get_version(),
+    license='GNU GPL 2',
+    platforms=['any'],
+    description='ELinks-like encoding error handler',
+    long_description=__doc__.strip(),
+    classifiers=classifiers,
+    url='http://jwilk.net/software/python-elinks',
+    author='Jakub Wilk',
+    author_email='jwilk@jwilk.net',
+    packages=['elinks'],
+    cmdclass=dict(build_py=distutils_build_py),
 )
 
 # vim:ts=4 sw=4 et
