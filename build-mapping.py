@@ -108,4 +108,4 @@ for line in urlopen('http://repo.or.cz/w/elinks.git?a=blob_plain;f=Unicode/7bitr
 print 'MAPPING = \\'
 pprint(mapping, width=1)
 
-# vim:ts=4 sw=4 et
+# vim:ts=4 sts=4 sw=4 et

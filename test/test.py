@@ -27,4 +27,4 @@ def test_elinks():
 if __name__ == '__main__':
     test_elinks()
 
-# vim:ts=4 sw=4 et
+# vim:ts=4 sts=4 sw=4 et
