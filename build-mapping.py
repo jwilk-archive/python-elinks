@@ -1,6 +1,6 @@
 # encoding=UTF-8
 
-# Copyright © 2007-2010 Jakub Wilk <jwilk@jwilk.net>
+# Copyright © 2007-2015 Jakub Wilk <jwilk@jwilk.net>
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the “Software”), to deal
@@ -19,6 +19,8 @@
 # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
+
+from __future__ import print_function
 
 from sys import stderr
 from urllib2 import urlopen
@@ -61,13 +63,13 @@ mapping = {}
 def update(code, replace):
     mapping[unichr(code)] = unicode(replace)
 
-print '''# encoding=UTF-8
+print('''# encoding=UTF-8
 
 # This file was automatically generated from the Unicode/7bitrepl.lnx file of
 # ELinks 0.12 distribution. ELinks is free free software; you can redistribute
 # it and/or modify it under the terms of the GNU General Public License as
 # published by the Free Software Foundation; version 2 dated June, 1991.
-'''
+''')
 for line in urlopen('http://repo.or.cz/w/elinks.git?a=blob_plain;f=Unicode/7bitrepl.lnx;hb=elinks-0.12'):
     line = line.strip()
     if not line:
@@ -76,7 +78,7 @@ for line in urlopen('http://repo.or.cz/w/elinks.git?a=blob_plain;f=Unicode/7bitr
         continue
     m = _re.match(line)
     if not m:
-        print >>stderr, 'Bogus line: ' + line
+        print('Bogus line: ' + line, file=stderr)
     else:
         code = hexreplace = codes = idem = fwdt = None
         locals().update(m.groupdict())
@@ -105,7 +107,7 @@ for line in urlopen('http://repo.or.cz/w/elinks.git?a=blob_plain;f=Unicode/7bitr
         else:
             raise InternalError()
 
-print 'MAPPING = \\'
+print('MAPPING = \\')
 pprint(mapping, width=1)
 
 # vim:ts=4 sts=4 sw=4 et
