@@ -24,7 +24,6 @@ from __future__ import print_function
 
 from sys import stderr
 from urllib2 import urlopen
-from warnings import warn
 from pprint import pprint
 import re
 
