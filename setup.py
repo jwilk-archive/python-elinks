@@ -1,3 +1,11 @@
+# encoding=UTF-8
+
+# Copyright © 2007-2015 Jakub Wilk <jwilk@jwilk.net>
+#
+# This package is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 2 dated June, 1991.
+
 '''
 python-elinks installs an encoding error handler that uses the same ASCII replacements as ELinks does.
 '''
