@@ -1,6 +1,6 @@
 # encoding=UTF-8
 
-# Copyright © 2007-2010 Jakub Wilk <jwilk@jwilk.net>
+# Copyright © 2007-2015 Jakub Wilk <jwilk@jwilk.net>
 #
 # This package is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -19,7 +19,7 @@ def handler(exception):
     if isinstance(exception, (UnicodeEncodeError, UnicodeTranslateError)):
         return ''.join(MAPPING.get(ch, u'*') for ch in exception.object[exception.start:exception.end]), exception.end
     else:
-        raise TypeError("Don't know how to handle %s in error callback" % exception.__class__.__name__)
+        raise TypeError("Don't know how to handle {exc} in error callback".format(exc=exception.__class__.__name__))
 
 _register_error('elinks', handler)
 
