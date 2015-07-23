@@ -7,6 +7,7 @@ python:
 - "3.3"
 - "3.4"
 - "pypy3"
+- "nightly"
 script:
 - python setup.py build
 - cp -r build/lib*/elinks test/
