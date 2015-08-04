@@ -19,7 +19,7 @@ def handler(exception):
     if isinstance(exception, (UnicodeEncodeError, UnicodeTranslateError)):
         return ''.join(MAPPING.get(ch, u'*') for ch in exception.object[exception.start:exception.end]), exception.end
     else:
-        raise TypeError("Don't know how to handle {exc} in error callback".format(exc=exception.__class__.__name__))
+        raise TypeError("Don't know how to handle {exc} in error callback".format(exc=type(exception).__name__))
 
 _register_error('elinks', handler)
 
