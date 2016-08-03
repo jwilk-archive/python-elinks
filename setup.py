@@ -57,7 +57,6 @@ distutils.core.setup(
     name='python-elinks',
     version=get_version(),
     license='GNU GPL 2',
-    platforms=['any'],
     description='ELinks-like encoding error handler',
     long_description=__doc__.strip(),
     classifiers=classifiers,
