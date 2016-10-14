@@ -14,6 +14,7 @@
 # for more details.
 
 import elinks
+del elinks  # hi, pyflakes!
 
 try:
     unicode
