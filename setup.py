@@ -17,18 +17,6 @@
 python-elinks installs an encoding error handler that uses the same ASCII replacements as ELinks does.
 '''
 
-classifiers = '''
-Development Status :: 4 - Beta
-Intended Audience :: Developers
-License :: OSI Approved :: GNU General Public License (GPL)
-Operating System :: OS Independent
-Programming Language :: Python
-Programming Language :: Python :: 2
-Programming Language :: Python :: 3
-Topic :: Software Development :: Libraries :: Python Modules
-Topic :: Text Processing :: Filters
-'''.strip().splitlines()
-
 import os
 import distutils.core
 
@@ -52,6 +40,18 @@ def get_version():
         return d['__version__']
     except LookupError:
         raise IOError('Unexpected end-of-file')
+
+classifiers = '''
+Development Status :: 4 - Beta
+Intended Audience :: Developers
+License :: OSI Approved :: GNU General Public License (GPL)
+Operating System :: OS Independent
+Programming Language :: Python
+Programming Language :: Python :: 2
+Programming Language :: Python :: 3
+Topic :: Software Development :: Libraries :: Python Modules
+Topic :: Text Processing :: Filters
+'''.strip().splitlines()
 
 distutils.core.setup(
     name='python-elinks',
