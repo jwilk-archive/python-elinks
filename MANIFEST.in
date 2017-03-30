@@ -1,3 +1,5 @@
 include MANIFEST.in
+
+include COPYING
 include build-mapping.py
 include test/*.py
