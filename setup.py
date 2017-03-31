@@ -34,6 +34,7 @@ def get_version():
         for line in file:
             if line.startswith('__version__ ='):
                 exec(line, d)
+                break
     return d['__version__']
 
 classifiers = '''
