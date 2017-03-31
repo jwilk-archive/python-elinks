@@ -18,7 +18,6 @@ python-elinks installs an encoding error handler that uses the same ASCII replac
 '''
 
 import io
-import os
 
 import distutils.core
 
