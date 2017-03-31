@@ -31,7 +31,7 @@ except ImportError:
 
 def get_version():
     d = {}
-    with io.open(os.path.join('elinks', '__init__.py'), encoding='UTF-8') as file:
+    with io.open('elinks/__init__.py', encoding='UTF-8') as file:
         for line in file:
             if line.startswith('__version__ ='):
                 exec(line, d)
