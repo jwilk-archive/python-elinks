@@ -17,7 +17,9 @@
 python-elinks installs an encoding error handler that uses the same ASCII replacements as ELinks does.
 '''
 
+import io
 import os
+
 import distutils.core
 
 try:
@@ -29,7 +31,7 @@ except ImportError:
 
 def get_version():
     d = {}
-    file = open(os.path.join('elinks', '__init__.py'))
+    file = io.open(os.path.join('elinks', '__init__.py'), encoding='UTF-8')
     try:
         for line in file:
             if line.startswith('__version__ ='):
