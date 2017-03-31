@@ -31,13 +31,10 @@ except ImportError:
 
 def get_version():
     d = {}
-    file = io.open(os.path.join('elinks', '__init__.py'), encoding='UTF-8')
-    try:
+    with io.open(os.path.join('elinks', '__init__.py'), encoding='UTF-8') as file:
         for line in file:
             if line.startswith('__version__ ='):
                 exec(line, d)
-    finally:
-        file.close()
     return d['__version__']
 
 classifiers = '''
