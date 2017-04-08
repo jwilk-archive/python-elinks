@@ -28,7 +28,7 @@ except ImportError:
     # Python 2.X
     from distutils.command.build_py import build_py as distutils_build_py
 
-int(*['0'], base=0)  # Python >= 2.6 is required
+b''  # Python >= 2.6 is required
 
 def get_version():
     d = {}
